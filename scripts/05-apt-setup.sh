@@ -11,7 +11,7 @@ if [[ "$SYSTEM_TYPE" == *"ubuntu-"* ]]; then
     echo "[$(date +'%Y-%m-%d %H:%M:%S')]   └─ 配置 Ubuntu $UBUNTU_VERSION 源"
     cat > rootdir/etc/apt/sources.list.d/ubuntu.sources << EOF
 Types: deb
-URIs: http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports
+URIs: https://https://mirror.yandex.ru/ubuntu-ports/
 Suites: $UBUNTU_VERSION $UBUNTU_VERSION-updates $UBUNTU_VERSION-backports
 Components: main restricted universe multiverse
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
@@ -26,7 +26,7 @@ else
     echo "[$(date +'%Y-%m-%d %H:%M:%S')]   └─ 配置 Debian $DEBIAN_VERSION 源"
     cat > rootdir/etc/apt/sources.list.d/debian.sources << EOF
 Types: deb
-URIs: http://mirrors.tuna.tsinghua.edu.cn/debian
+URIs: https://repository.su/debian
 Suites: $DEBIAN_VERSION $DEBIAN_VERSION-updates $DEBIAN_VERSION-backports
 Components: main contrib non-free non-free-firmware
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
