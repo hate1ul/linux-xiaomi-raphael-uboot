@@ -14,13 +14,11 @@ Types: deb
 URIs: https://https://mirror.yandex.ru/ubuntu-ports/
 Suites: $UBUNTU_VERSION $UBUNTU_VERSION-updates $UBUNTU_VERSION-backports
 Components: main restricted universe multiverse
-Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 
 Types: deb
 URIs: http://ports.ubuntu.com/ubuntu-ports/
 Suites: $UBUNTU_VERSION-security
 Components: main restricted universe multiverse
-Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 EOF
 else
     echo "[$(date +'%Y-%m-%d %H:%M:%S')]   └─ 配置 Debian $DEBIAN_VERSION 源"
@@ -29,13 +27,11 @@ Types: deb
 URIs: https://mirror.truenetwork.ru/debian
 Suites: $DEBIAN_VERSION $DEBIAN_VERSION-updates $DEBIAN_VERSION-backports
 Components: main contrib non-free non-free-firmware
-Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
 Types: deb
 URIs: https://mirror.truenetwork.ru/debian-security
 Suites: $DEBIAN_VERSION-security
 Components: main contrib non-free non-free-firmware
-Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 EOF
 fi
 
