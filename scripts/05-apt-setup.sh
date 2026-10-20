@@ -11,27 +11,31 @@ if [[ "$SYSTEM_TYPE" == *"ubuntu-"* ]]; then
     echo "[$(date +'%Y-%m-%d %H:%M:%S')]   └─ 配置 Ubuntu $UBUNTU_VERSION 源"
     cat > rootdir/etc/apt/sources.list.d/ubuntu.sources << EOF
 Types: deb
-URIs: https://https://mirror.yandex.ru/ubuntu-ports/
+URIs: http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports
 Suites: $UBUNTU_VERSION $UBUNTU_VERSION-updates $UBUNTU_VERSION-backports
 Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 
 Types: deb
 URIs: http://ports.ubuntu.com/ubuntu-ports/
 Suites: $UBUNTU_VERSION-security
 Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 EOF
 else
     echo "[$(date +'%Y-%m-%d %H:%M:%S')]   └─ 配置 Debian $DEBIAN_VERSION 源"
     cat > rootdir/etc/apt/sources.list.d/debian.sources << EOF
 Types: deb
-URIs: https://mirror.truenetwork.ru/debian
+URIs: http://mirrors.tuna.tsinghua.edu.cn/debian
 Suites: $DEBIAN_VERSION $DEBIAN_VERSION-updates $DEBIAN_VERSION-backports
 Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
 Types: deb
-URIs: https://mirror.truenetwork.ru/debian-security
+URIs: http://security.debian.org/debian-security
 Suites: $DEBIAN_VERSION-security
 Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 EOF
 fi
 
