@@ -26,13 +26,13 @@ else
     echo "[$(date +'%Y-%m-%d %H:%M:%S')]   └─ 配置 Debian $DEBIAN_VERSION 源"
     cat > rootdir/etc/apt/sources.list.d/debian.sources << EOF
 Types: deb
-URIs: https://repository.su/debian
+URIs: https://mirror.truenetwork.ru/debian
 Suites: $DEBIAN_VERSION $DEBIAN_VERSION-updates $DEBIAN_VERSION-backports
 Components: main contrib non-free non-free-firmware
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
 Types: deb
-URIs: http://security.debian.org/debian-security
+URIs: https://mirror.truenetwork.ru/debian-security
 Suites: $DEBIAN_VERSION-security
 Components: main contrib non-free non-free-firmware
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
